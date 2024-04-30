@@ -35,7 +35,7 @@ router.get("/:id",async (req,res) =>{
 router.put("/:id", async (req,res)=>{
     const body = req.body;
     const id = req.params.id;
-    const resp = await ModelUser.findByIdAndUpdate({_id: id, body})
+    const resp = await ModelUser.findByIdAndUpdate({_id: id}, body)
     res.send(resp);
 })
 
